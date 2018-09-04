@@ -92,3 +92,31 @@ function contentBn(imgs,point,leftbtn,rightbtn,widths,activeClass){
         }
     }
 }
+
+
+
+
+
+    
+
+function trans_box(button,miList,w,num,tt){
+
+    let times=0;
+    //右
+    button[0].onclick=function () {
+        times++;
+        if(times==num){
+            times=tt;
+        }
+        miList.style.transform=`translate(${(-w*times)}px)`;
+    }
+    //左
+    button[1].onclick=function () {
+        times--;
+        if(times==-1){
+            times=0;
+        }
+        miList.style.transform=`translate(${(-w*times)}px)`;
+    }
+
+}

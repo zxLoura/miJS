@@ -2,7 +2,7 @@
 * @Author: ZX
 * @Date:   2018-08-29 14:38:44
 * @Last Modified by:   ZX
-* @Last Modified time: 2018-09-03 23:13:15
+* @Last Modified time: 2018-09-04 20:39:43
 */
 window.onload=function(){
 	let lis=document.getElementsByClassName("father");
@@ -133,7 +133,7 @@ window.onload=function(){
     let leftbtn1=document.querySelectorAll(".leftbtn1")[0];
     let rightbtn1=document.querySelectorAll(".rightbtn1")[0];
     let widths1=parseInt(getComputedStyle(lunbo1[0],null).width);
-    console.log(lunbo1,point1,leftbtn1,rightbtn1,widths1);
+    // console.log(lunbo1,point1,leftbtn1,rightbtn1,widths1);
 
     
     contentBn(lunbo1,point1,leftbtn1,rightbtn1,widths1,"active1");
@@ -144,7 +144,7 @@ window.onload=function(){
     let leftbtn2=document.querySelectorAll(".leftbtn2")[0];
     let rightbtn2=document.querySelectorAll(".rightbtn2")[0];
     let widths2=parseInt(getComputedStyle(lunbo2[0],null).width);
-    console.log(lunbo2,point2,leftbtn2,rightbtn2,widths2);
+    // console.log(lunbo2,point2,leftbtn2,rightbtn2,widths2);
 
     
     contentBn(lunbo2,point2,leftbtn2,rightbtn2,widths2,"active1");
@@ -155,7 +155,7 @@ window.onload=function(){
     let leftbtn3=document.querySelectorAll(".leftbtn3")[0];
     let rightbtn3=document.querySelectorAll(".rightbtn3")[0];
     let widths3=parseInt(getComputedStyle(lunbo3[0],null).width);
-    console.log(lunbo3,point3,leftbtn3,rightbtn3,widths3);
+    // console.log(lunbo3,point3,leftbtn3,rightbtn3,widths3);
 
     
     contentBn(lunbo3,point3,leftbtn3,rightbtn3,widths3,"active1");
@@ -167,13 +167,50 @@ window.onload=function(){
     let leftbtn4=document.querySelectorAll(".leftbtn4")[0];
     let rightbtn4=document.querySelectorAll(".rightbtn4")[0];
     let widths4=parseInt(getComputedStyle(lunbo4[0],null).width);
-    console.log(lunbo4,point4,leftbtn4,rightbtn4,widths4);
+    // console.log(lunbo4,point4,leftbtn4,rightbtn4,widths4);
 
     
     contentBn(lunbo4,point4,leftbtn4,rightbtn4,widths4,"active1");
 
 
+
+
+
+
+    let button=document.querySelectorAll(".button");
+    let miList=document.querySelector(".miList");
+    let w=parseInt(getComputedStyle(miList,null).width)/2;
+    
+
+
+    trans_box(button,miList,w,2,1);
+
+
+
+    let button1=document.querySelectorAll(".button1");
+    let reList=document.querySelector(".reList");
+    let wi=parseInt(getComputedStyle(reList,null).width)/3;
+
+
+    trans_box(button1,reList,wi,3,2)
+
+    let barshop=document.querySelector(".barshop");
+    let side=document.querySelector(".side");
+    console.log(barshop,side);
+
+    barshop.onmouseenter=function(){
+        side.style.height=100+"px";
+    }
+    barshop.onmouseleave=function(){
+        side.style.height=0;
+    }
+
+
+
+
+
 }
+
 
 
 
