@@ -2,7 +2,7 @@
 * @Author: ZX
 * @Date:   2018-07-31 14:07:11
 * @Last Modified by:   ZX
-* @Last Modified time: 2018-09-04 20:49:51
+* @Last Modified time: 2018-09-05 18:11:23
 */
 *{
 	padding: 0px;
@@ -161,7 +161,6 @@ i{
 	/* background-color: blue; */
 	text-align: center;
 	line-height: 88px;
-
 }
 
 .topic .bar ul li:nth-child(1){
@@ -527,6 +526,9 @@ i{
 	font-size: 14px;
 	margin-left: 20px;
 }
+.banner ul li:hover .sons{
+ 	box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
 /* 标签栏结束 */
 
 /* 轮播开始 */
@@ -793,9 +795,16 @@ i{
     border: 1px solid #e0e0e0;
     text-align: center;
     line-height: 24px;
+    color: #e0e0e0;
 }
-.flash .btn .button:nth-child(2){
-	border-right: none;
+.flash .btn .button:nth-child(1){
+	border-left: none;
+}
+.flash .btn .button:hover{
+	color: #ff6700;
+}
+.flash .btn .hot3{
+	color:#b0b0b0;
 }
 .flash .shan{
 	width: 234px;
@@ -893,6 +902,9 @@ i{
 	color: #b0b0b0;
 	font-size: 12px;
 	margin: 0 20px 12px;
+}
+.flash .shan_box .miList .list_lis a{
+	color: #333;
 }
 .flash .shan_box .miList .list_lis .p2{
 	color: #ff6709;
@@ -1043,8 +1055,8 @@ i{
 /* 家电开始 */
 .household{
 	width: 100%;
-/* 	height: 120px; */
-	padding:22px 0 22px;
+	height: 164px;
+	padding: 22px 0 ;
 	background-color: #f5f5f5;
 }
 .household .picture{
@@ -1061,7 +1073,7 @@ i{
 .home-box{
 	width: 100%;
 	height: 686px;
-	padding-bottom: 8px;
+	padding-bottom: 40px;
 	background-color: #f5f5f5;
 }
 .home-box h2{
@@ -1071,109 +1083,127 @@ i{
 	line-height: 58px;	
 }
 .home-box .hot{
-	width: 280px;
+	width: 240px;
 	height: 40px;
 	position: absolute;
 	top: 0px;
 	right: 0;
-/* 	background-color: yellow; */
 	padding-top: 16px;
+	display: flex;
+	justify-content: space-between;
 }
-.home-box .hot .hot-door{
-	display: inline-block;
+.home-box .hot .hotBox{
 	width: 32px;
 	height: 26px;
-	margin-bottom: 2px;
-	margin-left: 25px;
-/* 	background-color: blue; */
-	color: #ff6700;
-	font-size: 16px;
-	border-bottom: 2px solid #ff6700; 
+	/* background: red; */
 }
- .home-box .hot .tv{
- 	display: inline-block;
+.home-box .hot .hotBox:nth-child(2){
 	width: 64px;
-	height: 26px;
-	margin-bottom: 2px;
-	margin-left: 25px;
-/* 	background-color: blue; */
-	color: #000;
-	font-size: 16px;
 }
-.home-box .hot .cpu{
- 	display: inline-block;
-	width: 32px;
-	height: 26px;
-	margin-bottom: 2px;
-	margin-left: 25px;
-/* 	background-color: blue; */
-	color: #000;
-	font-size: 16px;
-}
-.home-box .hot .life{
- 	display: inline-block;
-	width: 32px;
-	height: 26px;
-	margin-bottom: 2px;
-	margin-left: 25px;
-/* 	background-color: blue; */
-	color: #000;
-	font-size: 16px;
-}
-.home-box .hot .hot-ddor:hover{
-	border-bottom: 2px solid #ff6700; 
+.home-box .hot .change{
 	color: #ff6700;
-}
-.home-box .hot .tv:hover{
 	border-bottom: 2px solid #ff6700; 
-	color: #ff6700;
 }
-.home-box .hot .cpu:hover{
-	border-bottom: 2px solid #ff6700; 
-	color: #ff6700;
+.home-box .bigBox{
+	width:100%;
+	height: 614px;
+	/* background: red;  */
+	display: flex;
 }
-.home-box .hot .life:hover{
-	border-bottom: 2px solid #ff6700; 
-	color: #ff6700;
+.home-box .bigBox .leftBox{
+	width: 234px;
+	height: 100%;
+	position: relative;
+	/* background: yellow; */
 }
-.home-box ul{
-	width: 100%;
-	height: 628px;
-}
-.home-box ul li{
+.home-box .bigBox .leftBox .roofBox{
 	width: 234px;
 	height: 300px;
-	margin-left: 14px;
-	float: left;
-	background:#fff;
+	/* background: pink; */
+}
+.home-box .bigBox .leftBox .roofBox:nth-child(1){
 	margin-bottom: 14px;
-	transition: all .2s;
+}
+.home-box .bigBox .rightBox{
+	width:992px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	display: none;
+	/* background: blue; */
+}
+.home-box .bigBox .rightBox .cardBox{
+	width: 100%;
+	height: 100%;
+	
+}
+.home-box .bigBox .rightBox .cardBox .card{
+	width: 234px;
+	height: 300px;
+	background: #fff;
+	float: left;
+	margin-left: 14px;
 	overflow: hidden;
 	position: relative;
+	transition: all .5s;
 }
-.home-box ul li:nth-child(1){
-		margin-left: 0;
-}
-.home-box ul li:nth-child(6){
-		margin-left: 0;
-}
-.home-box ul .zero{
+.home-box .bigBox .rightBox .cardBox .card1{
 	width: 234px;
 	height: 143px;
+	/* background: red; */
+	float: left;
+}
+.home-box .bigBox .rightBox .cardBox .card11{
 	margin-bottom: 14px;
-	position: relative;
 }
-.home-box ul .zero-2{
-	margin-bottom: 0;
+.home-box .bigBox .rightBox .cardBox .card:nth-child(8){
+	margin-bottom: 14px;
 }
-.home-box ul .zero-1 img{
+
+.hot2{
+	border-bottom: 2px solid #ff6700; 
+	color: #ff6700;
+	box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+.home-box .bigBox .leftBox .roofBox img{
+	width: 234px;
+	height: 300px;
+}
+.home-box .bigBox .rightBox .cardBox .card img{
+	width: 150px;
+	height: 150px;	
+	margin-top:34px;
+	margin-left: 42px;
+}
+.home-box .bigBox .rightBox .cardBox .card h3{
+	text-align: center;
+	font-size: 14px;
+	font-weight: 400;
+	margin-bottom: 2px;
+}
+.home-box .bigBox .rightBox .cardBox .card h3 a{
+	color: #333;
+}
+.home-box .bigBox .rightBox .cardBox .card p{
+	margin: 0 10px;
+	height: 18px;
+	font-size: 12px;
+	color: #b0b0b0;
+	text-align: center;
+	margin-bottom: 10px;
+	text-overflow: ellipsis;
+	white-space: nowrap; */
+	/* overflow: hidden; */
+
+}
+.home-box .bigBox .rightBox .cardBox .card1 img{
 	width: 80px;
 	height: 80px;
 	position: absolute;
 	right: 20px;
 	top: -3px;
 }
-.home-box ul .zero-1 h3{
+.home-box .bigBox .rightBox .cardBox .card1 h3{
 	width: 94px;
 	height: 21px;
 	font-size: 14px;
@@ -1182,112 +1212,89 @@ i{
 	margin-left: 20px;
 	margin-top: 43px;
 }
-.home-box ul .zero-1 p{
+.home-box .bigBox .rightBox .cardBox .card1 .pp{
 	width: 94px;
 	height: 21px;
 	font-size: 12px;
 	color:#ff6700 ;
 	margin-left: 5px;
 }
-.home-box ul .zero-2 img{
+.home-box .bigBox .rightBox .cardBox .card3 img{
 	width: 59px;
 	height: 59px;
 	position: absolute;
 	right: 20px;
 	top: 10px;
 }
-.home-box ul .zero-2 h3{
+.home-box .bigBox .rightBox .cardBox .card3 h3{
 	width: 94px;
-	height: 45px;
 	font-size: 18px;
 	color: #333;
 	font-weight: 400;
 	margin-left: 20px;
 	margin-top: 48px;
+	/* background: blue; */
 }
-.home-box ul .zero-2 p{
-	width: 94px;
-	height: 21px;
-	font-size: 12px;
-	color:#757575;
-	margin-left: -5px;
-	margin-top: -20px;
-}
-.home-box ul li img{
-	width: 150px;
-	height: 150px;	
-	margin-top:34px;
-	margin-left: 42px;
-}
-.home-box ul li:nth-child(1) img{
-	width: 234px;
-	height: 300px;
-	margin: 0;
-}
-.home-box ul li:nth-child(6) img{
-	width: 234px;
-	height: 300px;
-	margin: 0;
-}
-.home-box ul li h3{
+
+
+.home-box .bigBox .rightBox .cardBox .card h3{
 	text-align: center;
 	font-size: 14px;
 	font-weight: 400;
 	margin-bottom: 2px;
 }
-.home-box ul li h3 a{
+.home-box .bigBox .rightBox .cardBox .card h3 a{
 	color: #333;
 }
-.home-box ul li p{
-	margin: 0 10px;
+.home-box .bigBox .rightBox .cardBox .card3 p{
+	width: 80px;
 	height: 18px;
 	font-size: 12px;
 	color: #b0b0b0;
-	text-align: center;
 	margin-bottom: 10px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	/* overflow: hidden; */
-
+	overflow: hidden;
+	/* background: red; */
 }
-.home-box ul li .price{
+.home-box .bigBox .rightBox .cardBox .card .price{
 	text-align: center;
 	color: #ff6700
 }
-.home-box ul li .price del{
+.home-box .bigBox .rightBox .cardBox .card .price del{
 		color: #b0b0b0;
 }
-.home-box ul li:hover{
+.home-box .bigBox .rightBox .cardBox .card:hover{
 	box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 	transform: translateY(-5px);
 
 }
-.home-box ul li .orange{
+.home-box .bigBox .rightBox .cardBox .card .orange{
 	width: 234px;
 	height: 76px;
 	background: #ff6700;
 	margin-top: 45px;
-	/* padding: 10px 0; */
+	/* padding: 10px 0;
 	/* margin-top: -75px; */
 	transition: all .8s;
-}
-.home-box ul li .orange .find{
+} 
+.home-box .bigBox .rightBox .cardBox .card .orange .find{
 	display: block;
 	margin: 0 30px 0px;
-	/* height: 70px; */
+	height: 50px;
 	font-size: 12px;
 	color: #fff;
 	line-height: 24px;
 }
-.home-box ul li .orange .pir{
+.home-box .bigBox .rightBox .cardBox .card .orange .pir{
 	font-size: 12px;
 	color:rgba(255,255,255,0.6);
 	margin: 0 30px 0px;
 }
-.home-box ul li:hover .orange{
+.home-box .bigBox .rightBox .cardBox .card:hover .orange{
 	transform: translateY(-75px);
 }
-.home-box  ul li .remise{
+.home-box .bigBox .rightBox .cardBox .card .remise{
 	height: 20px;
 	width: 64px;
 	background: #e53935;
@@ -1299,7 +1306,7 @@ i{
 	text-align: center;
 	line-height: 20px;
 }
-.home-box  ul li .remise1{
+.home-box .bigBox .rightBox .cardBox .card .remise1{
 	background: #83c44e;
 }
 /* 家电结束 */
@@ -1307,10 +1314,9 @@ i{
 /* 为你推荐 */
 .recommend{
 	width: 100%;
-	height: 450px;
-	padding-bottom:22px;
+	height: 380px;
+	/* padding-bottom:22px; */
 	background-color: #f5f5f5;
-	padding-top: 20px;
 	/* background: red; */
 }
 .recommend .container{
@@ -1334,8 +1340,9 @@ i{
 	margin: auto 0;
 	width: 76px;
 	height: 50px;
-
-
+}
+.recommend .btn .button1:hover{
+	color: #ff6700;
 }
 .recommend .btn .button1{
 	width: 35px;
@@ -1345,9 +1352,13 @@ i{
     border: 1px solid #e0e0e0;
     text-align: center;
     line-height: 24px;
+    color: #e0e0e0;
 }
-.recommend .btn .button1:nth-child(2){
-	border-right: none;
+.recommend .btn .hot4{
+	color:#b0b0b0;
+}
+.recommend .btn .button1:nth-child(1){
+	border-left: none;
 }
 .recommend .recomd_box{
 	width:100%; 
@@ -1952,6 +1963,7 @@ margin: 0 30px;
 	right: 33px;
 	line-height: 39px;
 	text-align: center;
+	display: none;
 }
 .back .return i{
 	font-size: 20px;

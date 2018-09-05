@@ -78,8 +78,8 @@ function contentBn(imgs,point,leftbtn,rightbtn,widths,activeClass){
                 });
                 point[now].classList.remove(activeClass);
                 point[i].classList.add(activeClass);
-                now=i;
-            }else{
+                now=next=i;
+            }else if(now>i){
                 imgs[i].style.left=`$-{widths}px`;
                 animate(imgs[now],{left:widths});
                 animate(imgs[i],{left:0},function () {
@@ -87,7 +87,7 @@ function contentBn(imgs,point,leftbtn,rightbtn,widths,activeClass){
                 });
                 point[now].classList.remove(activeClass);
                 point[i].classList.add(activeClass);
-                now=i;
+                now=next=i;
             }
         }
     }
@@ -99,7 +99,7 @@ function contentBn(imgs,point,leftbtn,rightbtn,widths,activeClass){
 
     
 
-function trans_box(button,miList,w,num,tt){
+function trans_box(button,miList,w,num,tt,hotClass){
 
     let times=0;
     //右
@@ -109,6 +109,9 @@ function trans_box(button,miList,w,num,tt){
             times=tt;
         }
         miList.style.transform=`translate(${(-w*times)}px)`;
+        button[0].classList.add(hotClass);
+        button[1].classList.remove(hotClass);
+
     }
     //左
     button[1].onclick=function () {
@@ -117,6 +120,10 @@ function trans_box(button,miList,w,num,tt){
             times=0;
         }
         miList.style.transform=`translate(${(-w*times)}px)`;
+        button[0].classList.remove(hotClass);
+        button[1].classList.add(hotClass);
+
+
     }
 
 }

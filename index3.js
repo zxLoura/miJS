@@ -2,7 +2,7 @@
 * @Author: ZX
 * @Date:   2018-08-29 14:38:44
 * @Last Modified by:   ZX
-* @Last Modified time: 2018-09-04 20:39:43
+* @Last Modified time: 2018-09-05 18:26:28
 */
 window.onload=function(){
 	let lis=document.getElementsByClassName("father");
@@ -88,6 +88,7 @@ window.onload=function(){
     }
     //自动轮播
     let t;
+    // let t=setInterval(move,2000);
     function move() {
         num++;
         if(num==5){
@@ -183,7 +184,7 @@ window.onload=function(){
     
 
 
-    trans_box(button,miList,w,2,1);
+    trans_box(button,miList,w,2,1,"hot3");
 
 
 
@@ -192,11 +193,18 @@ window.onload=function(){
     let wi=parseInt(getComputedStyle(reList,null).width)/3;
 
 
-    trans_box(button1,reList,wi,3,2)
+    trans_box(button1,reList,wi,3,2,"hot4")
+
+
+
+
+
+
+
 
     let barshop=document.querySelector(".barshop");
     let side=document.querySelector(".side");
-    console.log(barshop,side);
+    // console.log(barshop,side);
 
     barshop.onmouseenter=function(){
         side.style.height=100+"px";
@@ -207,6 +215,40 @@ window.onload=function(){
 
 
 
+//家电板块选项卡
+    let hotBox=document.querySelectorAll(".hotBox");
+    let rightBox=document.querySelectorAll(".rightBox");
+    // console.log(elect,elecc);
+    
+    rightBox[0].style.display="block";
+    hotBox[0].classList.add("change");
+    hotBox.forEach(function(value,index){
+        value.onmouseenter=function(){
+            rightBox.forEach(function(element,i){
+                hotBox[i].classList.remove("change");
+                element.style.display="none";
+            })
+            value.classList.add("change");
+            rightBox[index].style.display="block";
+        }
+    })
+
+
+
+    let back=document.querySelector(".return");
+    // console.log(back);
+    window.onscroll=function (){
+        let h=document.body.scrollTop||document.documentElement.scrollTop;
+        if(h>=800){
+            back.style.display="block";
+        }else{
+            back.style.display="none";
+        }
+    } 
+    back.onclick=function () {
+        animate(document.body,{scrollTop:0},600);
+        animate(document.documentElement,{scrollTop:0},600);
+    }
 
 
 }
