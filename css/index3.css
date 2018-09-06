@@ -2,7 +2,7 @@
 * @Author: ZX
 * @Date:   2018-07-31 14:07:11
 * @Last Modified by:   ZX
-* @Last Modified time: 2018-09-05 18:11:23
+* @Last Modified time: 2018-09-06 13:06:45
 */
 *{
 	padding: 0px;
@@ -561,7 +561,7 @@ i{
         width: 10px;
         height: 10px;
         border-radius: 5px;
-        background:green;
+        background:#fff;
         border: 2px solid #757575; 
 }
 .banner .dots .active{
@@ -1269,6 +1269,10 @@ i{
 	transform: translateY(-5px);
 
 }
+.home-box .bigBox .leftBox .roofBox:hover{
+	box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+	transform: translateY(-5px);
+}
 .home-box .bigBox .rightBox .cardBox .card .orange{
 	width: 234px;
 	height: 76px;
@@ -1934,7 +1938,7 @@ margin: 0 30px;
 	
 }
 .back ul{
-	height: 120px;
+/* 	height: 120px; */
 	width:25px; 
 }
 .back ul li{
@@ -1954,24 +1958,147 @@ margin: 0 30px;
 .back ul li:nth-child(2){
 	border-bottom: none;
 }
-.back .return{
+
+.back .return4{
 	height: 39px;
 	width: 25px;
 	border: 1px solid #f5f5f5;
 	position: fixed;
+	background: #fff;	
 	bottom: 73px;
 	right: 33px;
 	line-height: 39px;
 	text-align: center;
 	display: none;
 }
-.back .return i{
+.back .return4 i{
 	font-size: 20px;
 	color:#b0b0b0; 
 }
 .back ul li i:hover{
 	color: #ff6700;
 }
-.back .return i:hover{
+.back .return4 i:hover{
 	color: #ff6700;
+}
+
+.leftReturn{
+	width: 72px;
+	height: 27px;
+	/* background: #fff;	 */
+	position: fixed;
+	bottom: 73px;
+	right: 58px;
+	display: none;	
+}
+.barReturn .barArrow{
+	margin-top: 6px;
+	float: right;
+   	width: 11px;
+    height: 11px;
+    background: url("../img/arrow.png"); 
+    background-repeat: no-repeat;
+
+}
+.barReturn p{
+	width: 60px;
+	height: 29px;
+	padding: 0 8px;
+	border: 1px solid #f5f5f5;
+	line-height: 27px;
+	text-align: center;
+	color: #757575;
+    font-size: 14px; 
+	background: #fff;	
+
+}
+.leftReturn1{
+	width: 100px;
+	height: 27px;
+	/* background: #ff6700;	 */
+	position: fixed;
+	bottom: 125px;
+	right: 60px;
+	display: none;	
+}
+.barReturn1 .barArrow{
+	margin-top: 6px;
+	float: right;
+   	width: 11px;
+    height: 11px;
+    background: url("../img/arrow.png"); 
+    background-repeat: no-repeat;
+
+}
+.barReturn1 p{
+	width: 90px;
+	height: 29px;
+	padding: 0 2px;
+	border: 1px solid #f5f5f5;
+	line-height: 27px;
+	text-align: center;
+	color: #757575;
+    font-size: 14px; 
+	background: #fff;	
+
+}
+.leftReturn2{
+	width: 100px;
+	height: 27px;
+	/* background: #ff6700;	 */
+	position: fixed;
+	bottom: 164px;
+	right: 60px;
+	display: none;	
+}
+.barReturn2 .barArrow{
+	margin-top: 6px;
+	float: right;
+   	width: 11px;
+    height: 11px;
+    background: url("../img/arrow.png"); 
+    background-repeat: no-repeat;
+
+}
+.barReturn2 p{
+	width: 90px;
+	height: 29px;
+	padding: 0 2px;
+	border: 1px solid #f5f5f5;
+	line-height: 27px;
+	text-align: center;
+	color: #757575;
+    font-size: 14px; 
+	background: #fff;	
+
+}
+.leftReturn3{
+	width: 100px;
+	height: 27px;
+	/* background: #ff6700;	 */
+	position: fixed;
+	bottom: 203px;
+	right: 60px;
+	display: none;	
+}
+.barReturn3 .barArrow{
+	margin-top: 6px;
+	float: right;
+   	width: 11px;
+    height: 11px;
+    background: url("../img/arrow.png"); 
+    background-repeat: no-repeat;
+
+}
+.barReturn3 p{
+	width: 90px;
+	height: 29px;
+	padding: 0 2px;
+	border: 1px solid #f5f5f5;
+	line-height: 27px;
+	text-align: center;
+	color: #757575;
+    font-size: 14px; 
+	background: #fff;	
+
 }

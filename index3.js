@@ -2,9 +2,12 @@
 * @Author: ZX
 * @Date:   2018-08-29 14:38:44
 * @Last Modified by:   ZX
-* @Last Modified time: 2018-09-05 18:26:28
+* @Last Modified time: 2018-09-06 13:11:16
 */
 window.onload=function(){
+
+    //侧边选项卡
+    //侧边选项卡获取元素
 	let lis=document.getElementsByClassName("father");
 	let lis1=document.getElementsByClassName("father1");
 	let lis2=document.getElementsByClassName("father2");
@@ -14,11 +17,13 @@ window.onload=function(){
 	let son2=document.getElementsByClassName("son2");
 	let son3=document.getElementsByClassName("son3");
 	
+    //顶部选项卡获取元素
 	let find=document.getElementsByClassName("find-list");
 	// console.log(son);
 	let lis4=document.getElementsByClassName("topic-list");
 
 
+    //选项卡函数
 	for(let i=0;i<lis.length;i++){
 		lis[i].onmouseover=function () {
 	        son[i].style.display="block"; 
@@ -27,6 +32,9 @@ window.onload=function(){
 	        son[i].style.display="none";
 	    }
 	}
+
+
+
 	for(let i=0;i<lis1.length;i++){
 		lis1[i].onmouseover=function () {
 	        son1[i].style.display="block"; 
@@ -35,6 +43,8 @@ window.onload=function(){
 	        son1[i].style.display="none";
 	    }
 	}
+
+
 	for(let i=0;i<lis1.length;i++){
 		lis2[i].onmouseover=function () {
 	        son2[i].style.display="block"; 
@@ -43,6 +53,9 @@ window.onload=function(){
 	        son2[i].style.display="none";
 	    }
 	}
+
+
+
 	for(let i=0;i<lis1.length;i++){
 		lis3[i].onmouseover=function () {
 	        son3[i].style.display="block"; 
@@ -51,6 +64,9 @@ window.onload=function(){
 	        son3[i].style.display="none";
 	    }
 	}
+
+
+
 	for(let i=0;i<find.length;i++){
 		find[i].onmouseover=function () {
 	       lis4[i].style.display="block"; 
@@ -129,6 +145,7 @@ window.onload=function(){
 
 
 
+    //内容轮播调用     获取元素
 	let lunbo1=document.querySelectorAll(".lunbo1");
     let point1=document.querySelectorAll(".touch1");
     let leftbtn1=document.querySelectorAll(".leftbtn1")[0];
@@ -177,7 +194,7 @@ window.onload=function(){
 
 
 
-
+    //家电选项卡函数调用
     let button=document.querySelectorAll(".button");
     let miList=document.querySelector(".miList");
     let w=parseInt(getComputedStyle(miList,null).width)/2;
@@ -235,7 +252,7 @@ window.onload=function(){
 
 
 
-    let back=document.querySelector(".return");
+    let back=document.querySelector(".return4");
     // console.log(back);
     window.onscroll=function (){
         let h=document.body.scrollTop||document.documentElement.scrollTop;
@@ -245,10 +262,57 @@ window.onload=function(){
             back.style.display="none";
         }
     } 
+
+    
     back.onclick=function () {
         animate(document.body,{scrollTop:0},600);
         animate(document.documentElement,{scrollTop:0},600);
     }
+
+
+
+    let leftReturn=document.querySelector(".leftReturn");
+    let return4=document.querySelector(".return4");
+    return4.onmouseover=function () {
+        leftReturn.style.display="block";
+    }
+    return4.onmouseout=function () {
+        leftReturn.style.display="none";
+    }
+
+    let leftReturn1=document.querySelector(".leftReturn1");
+    let return3=document.querySelector(".return3");
+    // console.log(leftReturn1,return3)
+    return3.onmouseover=function () {
+        leftReturn1.style.display="block";
+    }
+    return3.onmouseout=function () {
+        leftReturn1.style.display="none";
+    }
+
+
+    let leftReturn2=document.querySelector(".leftReturn2");
+    let return2=document.querySelector(".return2");
+    console.log(leftReturn2,return2)
+
+    return2.onmouseover=function () {
+        leftReturn2.style.display="block";
+    }
+    return2.onmouseout=function () {
+        leftReturn2.style.display="none";
+    }
+
+    let leftReturn3=document.querySelector(".leftReturn3");
+    let return1=document.querySelector(".return1");
+    return1.onmouseover=function () {
+        leftReturn3.style.display="block";
+    }
+    return1.onmouseout=function () {
+        leftReturn3.style.display="none";
+    }
+    
+
+
 
 
 }

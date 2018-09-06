@@ -1,4 +1,7 @@
 function contentBn(imgs,point,leftbtn,rightbtn,widths,activeClass){
+
+
+    //内容轮播图   
     //2.定义初始值
     imgs[0].style.left=0;
     point[0].classList.add(activeClass);
@@ -97,8 +100,8 @@ function contentBn(imgs,point,leftbtn,rightbtn,widths,activeClass){
 
 
 
-    
 
+//家电选项卡
 function trans_box(button,miList,w,num,tt,hotClass){
 
     let times=0;
